@@ -1,10 +1,19 @@
+html {
+  
+}
+
 body {
     font-family: 'Cormorant Garamond', serif;
     background-color: ivory;
     color: #292929;
     padding-top: 50px;
-    padding-right: 15vw;
-    padding-left: 15vw;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+  min-height: 100%;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -20,18 +29,21 @@ main {
     font-weight: 100;
     max-width: 750px;
     min-width: 400px;
-    min-height: 60vh;
-    max-height: 75vh;
+    min-height: 58vh;
+    max-height: 100%;
     position: relative;
     animation-name: fadeIn;
     animation-duration: 2.5s;
     margin-bottom: 120px;
+    padding-left: 10vw;
+    padding-right: 10vw;
 }
 
 footer {
-    position: static;
+    margin-top: auto;
+    height: 100px;
     left: 0;
-    bottom: 20px;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-size: 0.8em;
@@ -122,7 +134,6 @@ h1 {
 
 .archive-text {
     opacity: 25%;
-    font-size: 2.8em;
 }
 
 .data-text:hover .data-tooltip {
@@ -184,24 +195,80 @@ h1 {
     }
   }
 
+/* Phone */
+@media screen and (min-width: 360px) and (max-width:767px) {
+  body {
+    padding-top: 25px;
+    height: 100vh;
+  }
 
-@media only screen and (min-width: 360px) and (max-width: 767px) {
-    body{
-        padding-top: 20px;
-    }
+  .page-wrapper {
+    height: 100%;
+  }
 
-    h1 {
-        font-size: 2.2em;
-        margin-bottom: -34px;
-    }
+  main {
+    margin: auto;
+    font-weight: 100;
+    max-width: 750px;
+    min-width: 400px;
+    min-height: 58vh;
+    max-height: 100%;
+    position: relative;
+    animation-name: fadeIn;
+    animation-duration: 2.5s;
+    margin-bottom: 150px;
+  }
 
-    .archive-text {
-        font-size: 2.2em;
-    }
- 
+  footer {
+    margin-top: auto;
+    height: 100px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 2em;
+  }
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: -50px;
+    margin-top: 2em;
+    text-align: left;
 }
+/* Tablet */
+/*
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+  body {
+    padding-right: 5vw;
+    padding-left: 5vw;
+  }
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) { 
+  header {
+    font-size: 1.8rem;
+  }
 
+  footer {
+    position: static;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+
+  h1 {
+    font-size: 5.5rem;
+    margin-bottom: -34px;
+    text-align: left;
+  }
+
+  .archive-text {
+    font-size: 3.5rem;
+    line-height: 4.5rem;
+  }
     
 }
