@@ -209,8 +209,7 @@ h1 {
   main {
     margin: auto;
     font-weight: 100;
-    max-width: 750px;
-    min-width: 400px;
+    max-width: 90vw;
     min-height: 58vh;
     max-height: 100%;
     position: relative;
@@ -271,4 +270,4 @@ h1 {
     line-height: 4.5rem;
   }
     
-}
+}*/
